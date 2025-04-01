@@ -1,8 +1,14 @@
 {
   "name": "zkrich-editor",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "author": {
+    "name": "zykai"
+  },
+  "repository": {
+    "url": "https://github.com/Lizikkai/zkrich-editor.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
