@@ -3,13 +3,13 @@
     <Toolbar :editor="editorCore" />
     <div
       ref="editorEl"
-      class="p-3 w-full h-72 outline-none"
+      class="p-3 w-full h-72 outline-none content"
       contenteditable
       @input="handleInput"
       @keydown.ctrl.z.prevent="undo"
       @keydown.ctrl.y.prevent="redo"
       v-html="content"
-      placeholder="请输入内容..."
+      data-placeholder="请输入内容..."
     ></div>
   </div>
 </template>
@@ -80,4 +80,9 @@
     })
 </script>
 
-<style scoped></style>
+<style scoped lang="less">
+  .content:empty::before {
+    content: attr(data-placeholder);
+    color: #8A8A8A;
+  }
+</style>
